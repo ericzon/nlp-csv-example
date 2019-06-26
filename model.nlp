@@ -1,0 +1,423 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ]
+  },
+  "nluManager": {
+    "settings": {},
+    "languages": [
+      "en"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "language": "en",
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.8,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.06,
+            "timeout": 120000
+          }
+        },
+        "language": "en",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": true,
+        "keepStopwords": true,
+        "stemDict": {
+          "drink,i,to,want,water": {
+            "domain": "default",
+            "intent": "want-drink"
+          },
+          "eat,i,sausag,to,want": {
+            "domain": "default",
+            "intent": "want-eat"
+          },
+          "drink,i,milk,should": {
+            "domain": "default",
+            "intent": "want-drink"
+          },
+          "eat,fruit,i,need,to": {
+            "domain": "default",
+            "intent": "want-eat"
+          }
+        },
+        "intentDict": {
+          "want-drink": "default",
+          "want-eat": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "en",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "default",
+                "utterance": [
+                  "i",
+                  "want",
+                  "to",
+                  "drink",
+                  "water"
+                ],
+                "tokens": [
+                  "i",
+                  "want",
+                  "to",
+                  "drink",
+                  "water"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "i",
+                  "want",
+                  "to",
+                  "eat",
+                  "sausag"
+                ],
+                "tokens": [
+                  "i",
+                  "want",
+                  "to",
+                  "eat",
+                  "sausag"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "i",
+                  "should",
+                  "drink",
+                  "milk"
+                ],
+                "tokens": [
+                  "i",
+                  "should",
+                  "drink",
+                  "milk"
+                ]
+              },
+              {
+                "intent": "default",
+                "utterance": [
+                  "i",
+                  "need",
+                  "to",
+                  "eat",
+                  "fruit"
+                ],
+                "tokens": [
+                  "i",
+                  "need",
+                  "to",
+                  "eat",
+                  "fruit"
+                ]
+              }
+            ],
+            "features": {
+              "i": 4,
+              "want": 2,
+              "to": 3,
+              "drink": 2,
+              "water": 1,
+              "eat": 2,
+              "sausag": 1,
+              "should": 1,
+              "milk": 1,
+              "need": 1,
+              "fruit": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "layers": [],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          },
+          "default": {
+            "settings": {
+              "language": "en",
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.8,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.06,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "want-drink",
+                "utterance": [
+                  "i",
+                  "want",
+                  "to",
+                  "drink",
+                  "water"
+                ],
+                "tokens": [
+                  "i",
+                  "want",
+                  "to",
+                  "drink",
+                  "water"
+                ]
+              },
+              {
+                "intent": "want-eat",
+                "utterance": [
+                  "i",
+                  "want",
+                  "to",
+                  "eat",
+                  "sausag"
+                ],
+                "tokens": [
+                  "i",
+                  "want",
+                  "to",
+                  "eat",
+                  "sausag"
+                ]
+              },
+              {
+                "intent": "want-drink",
+                "utterance": [
+                  "i",
+                  "should",
+                  "drink",
+                  "milk"
+                ],
+                "tokens": [
+                  "i",
+                  "should",
+                  "drink",
+                  "milk"
+                ]
+              },
+              {
+                "intent": "want-eat",
+                "utterance": [
+                  "i",
+                  "need",
+                  "to",
+                  "eat",
+                  "fruit"
+                ],
+                "tokens": [
+                  "i",
+                  "need",
+                  "to",
+                  "eat",
+                  "fruit"
+                ]
+              }
+            ],
+            "features": {
+              "i": 4,
+              "want": 2,
+              "to": 3,
+              "drink": 2,
+              "water": 1,
+              "eat": 2,
+              "sausag": 1,
+              "should": 1,
+              "milk": 1,
+              "need": 1,
+              "fruit": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.8,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.06,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  11,
+                  2
+                ],
+                "layers": [
+                  {
+                    "i": {},
+                    "want": {},
+                    "to": {},
+                    "drink": {},
+                    "water": {},
+                    "eat": {},
+                    "sausag": {},
+                    "should": {},
+                    "milk": {},
+                    "need": {},
+                    "fruit": {}
+                  },
+                  {
+                    "want-drink": {
+                      "bias": 1.524331689,
+                      "weights": {
+                        "i": 3.050812244,
+                        "want": 1.283495784,
+                        "to": 0.277292907,
+                        "drink": 6.590437889,
+                        "water": 3.81692028,
+                        "eat": -3.539626837,
+                        "sausag": -2.533424616,
+                        "should": 2.773518801,
+                        "milk": 2.773518801,
+                        "need": -1.006202459,
+                        "fruit": -1.006202459
+                      }
+                    },
+                    "want-eat": {
+                      "bias": 1.129110813,
+                      "weights": {
+                        "i": 2.26053381,
+                        "want": 0.619071007,
+                        "to": 2.871735811,
+                        "drink": -3.6959126,
+                        "water": -3.084710598,
+                        "eat": 5.95644474,
+                        "sausag": 3.703782558,
+                        "should": -0.61120224,
+                        "milk": -0.61120224,
+                        "need": 2.252664328,
+                        "fruit": 2.252664328
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.8,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.06,
+                  "maxDecimals": 9
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "en",
+        "I want to drink water"
+      ],
+      [
+        "en",
+        "I want to eat sausages"
+      ],
+      [
+        "en",
+        "I should drink milk"
+      ],
+      [
+        "en",
+        "I need to eat fruit"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {}
+  },
+  "slotManager": {},
+  "responses": {},
+  "actions": {}
+}
